@@ -53,44 +53,83 @@ function newSearchDisplay(e){
 }
 
 function skillsDisplay(url) {
+    
+
     fetch(url)
         .then(function(result){
             return result.json();
         })
         .then(function(json){
+            console.log(json.skills);
             showSkillDescrips(json.skills);
-            console.log(json);
             
         })
 }
 
 
 function showSkillDescrips(skills){
+    
+    
     while(skillsBucket.firstChild){
         skillsBucket.removeChild(skillsBucket.firstChild);
     }
 
+
     
-    for (let i = 0; i < skills.length; i++) {
+    for (let i = 0; i < skills.active.length; i++) {
         let heading = document.createElement('h2');
         let div = document.createElement('div');
         let para = document.createElement('p');
         let icon = document.createElement('img');
-       
+        let l = document.createElement('p');
 
+        if(i < charLevel.value){
         heading.className = 'skillsHeading';
-        heading.innerText = skills[i].name;
+        heading.innerText = skills.active[i].name;
         icon.className = 'skillPic';
-        icon.src = iconBase + skills[i].icon + '.png';
+        icon.src = iconBase + skills.active[i].icon + '.png';
         div.className = 'skillsDiv';
         para.className = 'skillDesc';
+        l.className = 'level recieved'
+        l.innerText = 'Unlocked at level:' + skills.active[i].level;
 
+        
         div.appendChild(heading);
         para.appendChild(icon);
-        para.innerHTML += skills[i].description;
+        para.innerHTML += skills.active[i].description;
         div.appendChild(para);
         skillsBucket.appendChild(div);
-      }
+        para.appendChild(l);
+        }
+    }
+
+
+    for (let i = 0; i < skills.passive.length; i++) {
+        let heading = document.createElement('h2');
+        let div = document.createElement('div');
+        let para = document.createElement('p');
+        let icon = document.createElement('img');
+        let l = document.createElement('p');
+       
+        if(i < charLevel.value){
+        heading.className = 'skillsHeading';
+        heading.innerText = skills.passive[i].name;
+        icon.className = 'skillPic';
+        icon.src = iconBase + skills.passive[i].icon + '.png';
+        div.className = 'skillsDiv';
+        para.className = 'skillDesc';
+        l.className = 'level recieved'
+        l.innerText = 'Unlocked at level:' + skills.passive[i].level;
+
+        
+        div.appendChild(heading);
+        para.appendChild(icon);
+        para.innerHTML += skills.passive[i].description;
+        div.appendChild(para);
+        skillsBucket.appendChild(div);
+        para.appendChild(l);
+        }
+    }
  }      
 
 submit.addEventListener('click',newSearchDisplay);
