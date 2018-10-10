@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Diablo 3 Skills</title>
+    <link rel="stylesheet" href="diablo3Skills.css">
+</head>
+<body>
+   <!--Title bar for game-->
+   
+    <h1>What Levels do your skills unlock?</h1>
+
+    <div class='wrapper'>
+        <!--Character Image-->
+        <div id="char-image" class="char-image"></div>
+        <div class="controls">
+            <!--Search Stuff-->
+            <form>
+                <p>
+                    <label for="class">Search a Character (required)</label> <!--google for dropdown menu-->
+                    <br>
+                    <input type="search" id="charClass" class="charClass">
+                </p>
+                <p>
+                    <label for="class-level">Enter Level of Character</label>
+                    <br>
+                    <input type="text" id="class-level" class="class-level">
+                </p>
+                <p>
+                    <button class="submit">Submit search</button>
+                </p>
+            </form>
+            <!--results-->
+            <div class="results">
+                <div id='classHeader'></div>
+                <section>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <div id='skillsBucket'>
+        <div id='skillDump'></div>
+    </div>
+
+    <script type="text/javascript" src="diablo3Skills.js"></script>
+</body>
+</html>

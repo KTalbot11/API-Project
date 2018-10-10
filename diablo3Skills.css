@@ -1,0 +1,43 @@
+body{
+    font-family: 'MedievalSharp', cursive;
+}
+
+.wrapper{
+    width: 80%;
+    margin: 3 auto;
+    display: flex;
+}
+
+.controls, .results {
+    flex: 1;
+    padding: 10px;
+}
+
+h1{
+    text-align: center;
+}
+
+.skillDesc {
+    font-family: 'MedievalSharp', cursive;
+    color: white;
+    vertical-align: top;
+    margin: 0;
+    padding: 0;
+}
+
+.skillPic {
+    float: left;
+    margin: 0 10px 0 10px;
+    padding: 0;
+}
+
+
+.skillsDiv {
+    padding: 0 0 1vh 0;
+    margin: 5vh 0;
+    border: 2px solid black;
+    border-radius: 10px;
+    overflow: auto;
+    background-color: #c11d02;
+}
+
