@@ -1,5 +1,7 @@
 body{
     font-family: 'MedievalSharp', cursive;
+    background-color: peru;
+    
 }
 
 .wrapper{
@@ -38,6 +40,23 @@ h1{
     border: 2px solid black;
     border-radius: 10px;
     overflow: auto;
-    background-color: #c11d02;
+    /* background-color: magenta; */
+    width: 50%;
+    margin-left: 25%;
+    text-align: start;
+}
+
+.results{
+    width: 25%;
+}
+
+
+.skillsHeading {
+    font-family: 'MedievalSharp', cursive;
+    background-color: white;
+    color: black;
+    border-radius:5px 5px 0 0;
+    padding: 0 0 0 0.5vw;
+    margin: 0 0 2vh 0;
 }
 

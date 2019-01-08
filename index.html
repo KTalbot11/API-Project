@@ -10,7 +10,7 @@
 <body>
    <!--Title bar for game-->
    
-    <h1>What Levels do your skills unlock?</h1>
+    <h1>What Levels do your skills unlock in Diablo 3?</h1>
 
     <div class='wrapper'>
         <!--Character Image-->
@@ -24,19 +24,27 @@
                     <input type="search" id="charClass" class="charClass">
                 </p>
                 <p>
-                    <label for="class-level">Enter Level of Character</label>
+                    <label for="class-level">Enter Level of Character (also required)</label>
                     <br>
-                    <input type="number" id="class-level" class="class-level">
+                    <input type="number" id="charLevel" class="charLevel">
                 </p>
                 <p>
                     <button class="submit">Submit search</button>
                 </p>
             </form>
+            <div id='masterColor'>
+                <div id='monk'></div>
+                <div id='bar'></div>
+                <div id="crus"></div>
+                <div id="dem"></div>
+                <div id="witchDoc"></div>
+                <div id="nec"></div>
+                <div id="wiz"></div>
+
+            </div>
             <!--results-->
             <div class="results">
                 <div id='classHeader'></div>
-                <section>
-                </section>
             </div>
         </div>
     </div>
